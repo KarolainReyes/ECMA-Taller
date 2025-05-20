@@ -4,6 +4,11 @@ body {
   color: white;
 }
 
+body a {
+  color: white;
+  text-decoration: none;
+}
+
 /*Desktop*/
 
 .encabezado {
