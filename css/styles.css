@@ -1,0 +1,17 @@
+body{margin: 0;background:linear-gradient(to right,black, rgb(16, 16, 133),black);color: white;}
+
+/*Desktop*/
+
+
+
+.encabezado{display: flex;flex-direction: row;width: 100%;height: 8vh;background-color: black;}
+
+.cuerpo-pagina{width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+
+.bloque-1{display: flex;width: 90%;gap: 1vh;box-sizing: border-box;}
+
+.ecma-que-es{width:70%;flex-wrap: wrap;}
+
+.tabla-navegacion{width: 30%;border: 1px solid white;padding: 1vh;border-radius: 10px;background-color: rgba(255, 255, 255, 0.137);}
+
+.tabla-navegacion h3{text-align: center;}
