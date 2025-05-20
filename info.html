@@ -171,7 +171,190 @@
                 </li>
             <li><strong>Promesas:</strong>Ayudan a manejar operaciones asíncronas de forma más limpia y organizada, evitando el callback hell. 
             </li>
+        </ul>
             <p>En resumen, ES6 ha revolucionado JavaScript al introducir una sintaxis más moderna y características que mejoran la eficiencia y la legibilidad del código, lo que la convierte en un estándar fundamental para el desarrollo web y de aplicaciones. </p>
+        <h3>ECMAScript 2016 o ES7.</h3>
+        <p>La séptima versión de ECMAScript se conoce como ECMAScript 2016 o ES7. Fue lanzada en junio de 2016 e introdujo características como el operador de exponenciación ** y el método <pre>Array.prototype.includes.</pre></p>
+        <p>Detalles adicionales sobre ES7</p>
+        <ul>
+            <li><strong>Fecha de lanzamiento</strong>Junio 2016</li>
+            <li><strong>Características clave</strong>
+            <ul>
+                <li><strong>Características clave</strong>** Facilita la elevación de números a una potencia. </li>
+                <li><strong>Método Array.prototype.includes():</strong>Permite verificar si un array contiene un determinado valor. </li>
+                <li><strong>Funcionalidades asíncronas:</strong>Preparó el terreno para las funciones async/await que serían introducidas en ECMAScript 2017. </li>
+                <p>La séptima versión de ECMAScript (ES7 o ES2016) introduce principalmente dos funcionalidades: el operador de exponenciación y el método includes() para arrays. 
+                    <h5>Operador de exponenciación **:</h5>
+                    Este operador permite calcular la potencia de un número de forma más sencilla que usando Math.pow(). 
+                    </p>
+                    <p>Ejemplo de uso:</p>
+                    <pre><code>
+                        let base = 2;
+                        let exponente = 3;
+                        let resultado = base ** exponente; // 2 elevado a la 3
+                        console.log(resultado); // 8
+                    </code></pre>
+                    <p>En este ejemplo, el operador ** se utiliza para elevar 2 a la potencia de 3, lo que resulta en 8.</p>
+            </ul></li>
+        </ul>
+        <h3>ECMAScript 2017 0 ES8</h3>
+        <p>Un ejemplo de código que utiliza una característica de ES8 es la función Object.entries(). Este método devuelve un array de arrays, donde cada sub-array contiene una clave y el valor correspondiente de un objeto.</p>
+        <p>Detalles adicionales sobre ES8</p>
+        <ul>
+            <li><strong>Fecha de lanzamiento</strong>Junio 2017</li>
+            <li><strong>Características clave</strong>
+            <ul>
+                <li><strong>Object.entries():</strong>Devuelve un array de pares clave-valor de un objeto.</li>
+                <li><strong>Async/Await:</strong>Facilita el manejo de operaciones asíncronas.</li>
+                <li><strong>String.prototype.padStart y String.prototype.padEnd:</strong>Añaden relleno a cadenas de texto.</li>
+            </ul></li>
+            <li><strong>Ejemplo de código:</strong>
+            <p>Uso de Object.entries() para iterar sobre un objeto:</p>
+            <pre><code>
+                const objeto = { a: 1, b: 2, c: 3 };
+                Object.entries(objeto).forEach(([clave, valor]) => {
+                    console.log(`Clave: ${clave}, Valor: ${valor}`);
+                });
+            </code></pre>
+            <p>En este ejemplo, Object.entries() convierte el objeto en un array de pares clave-valor, y luego se utiliza forEach() para iterar sobre ellos.</p>
     </div>
+    <h3>ECMAScript 2018 o ES8</h3>
+    <p>Se finalizó en junio de 2018 y se caracteriza por la introducción de nuevas funciones y características, incluyendo el tipo primitivo BigInt para números enteros de tamaño arbitrario, el operador de coalescencia nula (??) y el objeto globalThis.</p>
+    <p>Detalles adicionales sobre ES8</p>  
+    <ul>
+        <li><strong>Fecha de lanzamiento</strong>Junio 2018</li>
+        <li><strong>Características clave</strong>
+        <ul>
+            <li><strong>BigInt:</strong>Permite trabajar con números enteros de tamaño arbitrario.</li>
+            <li><strong>Operador de coalescencia nula (??):</strong>Devuelve el operando de la derecha si el operando de la izquierda es null o undefined.</li>
+            <li><strong>Object.values() y Object.entries():</strong>Devuelven arrays de valores y pares clave-valor de un objeto, respectivamente.</li>
+        </ul></li>
+        <li><strong>Ejemplo de código:</strong>
+        <p>Uso del operador de coalescencia nula:</p>
+        <pre><code>
+            const valor1 = null;
+            const valor2 = "Hola";
+            const resultado = valor1 ?? valor2; // Devuelve "Hola"
+            console.log(resultado);
+        </code></pre>
+        <p>En este ejemplo, el operador ?? devuelve valor2 porque valor1 es null.</p>
+        <h3>ECMAScript 2019 o ES9</h3>
+        <p>La décima versión de ECMAScript, también conocida como ES2019, se publicó en junio de 2019. Las principales novedades incluyen Array.prototype.flat, Array.prototype.flatMap, la estabilidad garantizada de Array.sort y Object.fromEntries, entre otros. 
+        </p>
+        <p>Detalles adicionales sobre ES9</p>
+        <ul>
+            <li><strong>Fecha de lanzamiento</strong>Junio 2019</li>
+            <li><strong>Características clave</strong>
+            <ul>
+                <li><strong>Array.prototype.flat:</strong>Aplanar arrays multidimensionales.</li>
+                <li><strong>Array.prototype.flatMap:</strong>Combina map y flat en una sola operación.</li>
+                <li><strong>Object.fromEntries():</strong>Crea un objeto a partir de un array de pares clave-valor.</li>
+            </ul></li>
+            <li><strong>Ejemplo de código:</strong>
+            <p>Uso de Array.prototype.flat:</p>
+            <pre><code>
+                const array = [1, [2, 3], [4, 5]];
+                const aplanado = array.flat(); // [1, 2, 3, 4, 5]
+                console.log(aplanado);
+            </code></pre>
+            <p>En este ejemplo, flat() aplana el array multidimensional en un array unidimensional.</p>
+            <h3>ECMAScript 2020 o ES11</h3>
+            <p>La undécima versión de ECMAScript, también conocida como ES2020, se publicó en junio de 2020. Las principales novedades incluyen el operador de encadenamiento opcional (?.), el operador de coalescencia nula (??) y la función globalThis.</p>
+            <p>Detalles adicionales sobre ES11</p>
+            <ul>
+                <li><strong>Fecha de lanzamiento</strong>Junio 2020</li>
+                <li><strong>Características clave</strong>
+                <ul>
+                    <li><strong>Operador de encadenamiento opcional (?.):</strong>Permite acceder a propiedades de objetos sin lanzar un error si la propiedad no existe.</li>
+                    <li><strong>Operador de coalescencia nula (??):</strong>Devuelve el operando de la derecha si el operando de la izquierda es null o undefined.</li>
+                    <li><strong>BigInt:</strong>Permite trabajar con números enteros de tamaño arbitrario.</li>
+                </ul></li>
+                <li><strong>Ejemplo de código:</strong>
+                <p>Uso del operador de encadenamiento opcional:</p>
+                <pre><code>
+                    const objeto = { a: { b: 1 } };
+                    const valor = objeto.a?.b; // Devuelve 1
+                    const valorInexistente = objeto.c?.d; // Devuelve undefined
+                    console.log(valor, valorInexistente);
+                </code></pre>
+                <p>En este ejemplo, el operador ?. permite acceder a la propiedad b sin lanzar un error si la propiedad c no existe.</p>
+                <h3>ECMAScript 2021 o ES12</h3>
+                <p>La duodécima versión de ECMAScript, también conocida como ES2021, se publicó en junio de 2021. Las principales novedades incluyen el método String.prototype.replaceAll, Promise.any y WeakRefs.</p>
+                <p>Detalles adicionales sobre ES12</p>
+                <ul>
+                    <li><strong>Fecha de lanzamiento</strong>Junio 2021</li>
+                    <li><strong>Características clave</strong>
+                    <ul>
+                        <li><strong>String.prototype.replaceAll:</strong>Permite reemplazar todas las ocurrencias de una subcadena en una cadena.</li>
+                        <li><strong>Promise.any:</strong>Devuelve la primera promesa que se resuelve, ignorando las rechazadas.</li>
+                        <li><strong>WeakRefs:</strong>Permite crear referencias débiles a objetos, lo que facilita la gestión de memoria.</li>
+                    </ul></li>
+                    <li><strong>Ejemplo de código:</strong>
+                    <p>Uso de String.prototype.replaceAll:</p>
+                    <pre><code>
+                        const cadena = "Hola, mundo. Hola, universo.";
+                        const nuevaCadena = cadena.replaceAll("Hola", "Adiós");
+                        console.log(nuevaCadena); // "Adiós, mundo. Adiós, universo."
+                    </code></pre>
+                    <p>En este ejemplo, replaceAll() reemplaza todas las ocurrencias de "Hola" por "Adiós".</p>
+                    <h3>ECMAScript 2022 o ES13</h3>
+                    <p>La decimotercera versión de ECMAScript, también conocida como ES2022, se publicó en junio de 2022. Las principales novedades incluyen la sintaxis de campos de clase y el uso de top-level await.</p>
+                    <p>Detalles adicionales sobre ES13</p>
+                    <ul>
+                        <li><strong>Fecha de lanzamiento</strong>Junio 2022</li>
+                        <li><strong>Características clave</strong>
+                        <ul>
+                            <li><strong>Sintaxis de campos de clase:</strong>Permite definir campos y métodos dentro de una clase.</li>
+                            <li><strong>Top-level await:</strong>Permite usar await en el nivel superior de un módulo.</li>
+                        </ul></li>
+                        <li><strong>Ejemplo de código:</strong>
+                        <p>Uso de la sintaxis de campos de clase:</p>
+                        <pre><code>
+                            class Persona {
+                                nombre = "Juan";
+                                saludar() {
+                                    console.log(`Hola, soy ${this.nombre}`);
+                                }
+                            }
+                            const persona = new Persona();
+                            persona.saludar(); // "Hola, soy Juan"
+                        </code></pre>
+                        <p>En este ejemplo, se define un campo nombre y un método saludar() dentro de la clase Persona.</p>
+                        <h3>ECMAScript 2023 o ES14</h3>
+                        <p>La decimocuarta versión de ECMAScript, también conocida como ES2023, se publicó en junio de 2023. Las principales novedades incluyen el método Array.prototype.findLast y Array.prototype.findLastIndex.</p>
+                        <p>Detalles adicionales sobre ES14</p>
+                        <ul>
+                            <li><strong>Fecha de lanzamiento</strong>Junio 2023</li>
+                            <li><strong>Características clave</strong>
+                            <ul>
+                                <li><strong>Array.prototype.findLast:</strong>Devuelve el último elemento que cumple con una condición dada.</li>
+                                <li><strong>Array.prototype.findLastIndex:</strong>Devuelve el índice del último elemento que cumple con una condición dada.</li>
+                            </ul></li>
+                            <li><strong>Ejemplo de código:</strong>
+                            <p>Uso de Array.prototype.findLast:</p>
+                            <pre><code>
+                                const array = [1, 2, 3, 4, 5];
+                                const ultimoPar = array.findLast(num => num % 2 === 0);
+                                console.log(ultimoPar); // 4
+                            </code></pre>
+                            <p>En este ejemplo, findLast() devuelve el último número par del array.</p>
+                            <h3>ECMAScript 2024 o ES15</h3>
+                            <p>La decimoquinta versión de ECMAScript, también conocida como ES2024, se publicará en junio de 2024. Las principales novedades incluyen el método Array.prototype.groupBy y WeakRefs.</p>
+                            <p>Detalles adicionales sobre ES15</p>
+                            <ul>
+                                <li><strong>Fecha de lanzamiento</strong>Junio 2024</li>
+                                <li><strong>Características clave</strong>
+                                <ul>
+                                    <li><strong>Array.prototype.groupBy:</strong>Permite agrupar elementos de un array según una función de agrupamiento.</li>
+                                    <li><strong>WeakRefs:</strong>Permite crear referencias débiles a objetos, lo que facilita la gestión de memoria.</li>
+                                </ul></li>
+                                <li><strong>Ejemplo de código:</strong>
+                                <p>Uso de Array.prototype.groupBy:</p>
+                                <pre><code>
+                                    const array = [1, 2, 3, 4, 5];
+                                    const grupos = array.groupBy(num => num % 2 === 0 ? "par" : "impar");
+                                    console.log(grupos); // { par: [2, 4], impar: [1, 3, 5] }
+                                </code></pre>
+                                <p>En este ejemplo, groupBy() agrupa los números en pares e impares.</p>
 </body>
 </html>
