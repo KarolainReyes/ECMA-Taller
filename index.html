@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" aria-label="Abrir menú lateral">☰</label>
-    <nav class="sidebar" aria-label="Menú de navegación lateral">
-        <h2>Versiones</h2>
+    <input type="checkbox" id="menu-toggle"/>
+        <label for="menu-toggle" aria-label="Abrir menú lateral">☰</label>
+        <nav class="sidebar" aria-label="Menú de navegación lateral">
+            <h2>Versiones</h2>
                     <a href="#ES1">ES1</a>
                     <a href="#ES2">ES2</a>
                     <a href="#ES3">ES3</a>
@@ -26,13 +26,15 @@
                     <a href="#ES13">ES13</a>
                     <a href="#ES14">ES14</a>
                     <a href="#ES15">ES15</a>
-    </nav>
+        </nav>
     <main class="cuerpo-pagina">
             <header class="encabezado">
                 <img src="./assets/logos/descarga.svg" alt="Logo de Campuslands" />
             </header>
-        <h1>La especificación ECMAScript</h1>
-        <h3>Normas y reglas del funcionamiento de JavaScript</h3>
+        <section class="titulo">
+            <h1>La especificación ECMAScript</h1>
+            <h3>Normas y reglas del funcionamiento de JavaScript</h3>
+        </section>
         <section class="info-principal">
                 <p><Strong>ECMAScript</Strong> es la especificación donde se mencionan todos los detalles de <strong>cómo
                 debe funcionar y comportarse Javascript.</strong> De esta forma, los diferentes navegadores
@@ -40,7 +42,7 @@
                 para que cualquier código o programa funcione exactamente igual, independientemente del navegador
                 que se utilice.</p>
         </section>
-        <section>
+        <section class="versiones">
             <div class="text"><h2>Versiones de ECMAScript</h2>
                 <p>ECMAScript suele venir acompañado de un número que indica la <strong>versión o revisión</strong> de
                 la que hablamos (algo similar a las versiones de un programa). En cada nueva versión de ECMAScript,
@@ -64,9 +66,9 @@
                         <li>Legado: ES1 sentó las bases para el desarrollo de versiones posteriores de ECMAScript, como ES2,
                             ES3 y más allá.</li>
                         <li>Ejemplo de código: Un simple programa que muestra un mensaje en la consola.</li>
-                        <pre><code>
-                            console.log("Hola, mundo!");
-                        </code></pre>
+                        <div class="codigo">
+                            <pre><code>console.log("Hola, mundo!");<code></pre>
+                        </div>
                     </ul>
             </div>
             <hr>
@@ -85,9 +87,11 @@
                             características nuevas que destacar.</li>
                         <li>Ejemplo de código: No se introdujeron nuevas características, por lo que el código sigue siendo
                             similar al de ES1.</li>
-                        <pre><code>
-                            console.log("Hola, mundo!");
-                        </code></pre>
+                        <div class="codigo">
+                            <pre><code>
+                                console.log("Hola, mundo!");
+                            </code></pre>
+                        </div>
                     </ul>
             </div>
             <hr>
@@ -104,15 +108,17 @@
                         <li>Impacto: Se convirtió en la base para muchas aplicaciones web y bibliotecas populares.</li>
                         <li>Ejemplo de código: Uso de expresiones regulares para validar un formato de correo electrónico.
                         </li>
-                        <pre><code>
-                            var email = "
-                            var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                            if (regex.test(email)) {
-                            console.log("Correo electrónico válido");
-                            } else {
-                            console.log("Correo electrónico inválido");
-                            }
-                        </code></pre>
+                        <div class="codigo">
+                            <pre><code>
+                                var email = "
+                                var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                                if (regex.test(email)) {
+                                console.log("Correo electrónico válido");
+                                } else {
+                                console.log("Correo electrónico inválido");
+                                }
+                            </code></pre>
+                        </div>
                     </ul>
             </div>
             <hr>
@@ -143,13 +149,15 @@
                         <li>Objetivo: Mejorar la funcionalidad y la interoperabilidad del lenguaje.</li>
                         <li>Impacto: Se convirtió en la base para muchas aplicaciones web y bibliotecas populares.</li>
                         <li>Ejemplo de código: Uso del modo estricto y métodos de array.</li>
-                        <pre><code>
+                        <div class="codigo">
+                            <pre><code>
                             "use strict";
                             var arr = [1, 2, 3];
                             arr.forEach(function(item) {
                             console.log(item);
                             });
-                        </code></pre>
+                            </code></pre>
+                        </div>
                     </ul>
                     <h5>Características de ES5:</h5>
                     <p>ES5 introdujo características como:</p>
@@ -221,14 +229,15 @@
                             <p>Este operador permite calcular la potencia de un número de forma más sencilla que usando
                             Math.pow().</p>
                             <p>Ejemplo de uso:</p>
-                            <pre><code>
+                            <div class="codigo">
+                                <pre><code>
                                 let base = 2;
                                 let exponente = 3;
                                 let resultado = base ** exponente; // 2 elevado a la 3
                                 console.log(resultado); // 8
-                            </code></pre>
-                            <p>En este ejemplo, el operador ** se utiliza para elevar 2 a la potencia de 3, lo que
-                                resulta en 8.</p>
+                                </code></pre>
+                            </div>
+                            <p>En este ejemplo, el operador ** se utiliza para elevar 2 a la potencia de 3, lo que resulta en 8.</p>
             </div>
             <hr>
             <div id="ES8">
@@ -251,12 +260,14 @@
                         <li><strong>Ejemplo de código:</strong>
                     </ul>
                         <p>Uso de Object.entries() para iterar sobre un objeto:</p>
-                            <pre><code>
-                                const objeto = { a: 1, b: 2, c: 3 };
-                                Object.entries(objeto).forEach(([clave, valor]) => {
-                                console.log(`Clave: ${clave}, Valor: ${valor}`);
-                            });
-                            </code></pre>
+                            <div class="codigo">
+                                <pre><code>
+                                    const objeto = { a: 1, b: 2, c: 3 };
+                                    Object.entries(objeto).forEach(([clave, valor]) => {
+                                    console.log(`Clave: ${clave}, Valor: ${valor}`);
+                                    });
+                                </code></pre>
+                            </div>
                         <p>En este ejemplo, Object.entries() convierte el objeto en un array de pares clave-valor, y
                                 luego se utiliza forEach() para iterar sobre ellos.</p>
             </div>
@@ -273,12 +284,14 @@
                             </ul>
                             <strong>Ejemplo de código:</strong>
                                 <p>Uso del operador de coalescencia nula:</p>
-                                <pre><code>
-                                    const valor1 = null;
-                                    const valor2 = "Hola";
-                                    const resultado = valor1 ?? valor2; // Devuelve "Hola"
-                                    console.log(resultado);
-                                </code></pre>
+                                <div class="codigo">
+                                    <pre><code>
+                                        const valor1 = null;
+                                        const valor2 = "Hola";
+                                        const resultado = valor1 ?? valor2; // Devuelve "Hola"
+                                        onsole.log(resultado);
+                                    </code></pre>
+                                </div>
                     <p>En este ejemplo, el operador ?? devuelve valor2 porque valor1 es null.</p>
             </div>
             <hr>
@@ -297,11 +310,13 @@
                             </ul>
                         <strong>Ejemplo de código:</strong>
                         <p>Uso de Array.prototype.flat:</p>
-                            <pre><code>
-                                const array = [1, [2, 3], [4, 5]];
-                                const aplanado = array.flat(); // [1, 2, 3, 4, 5]
-                                console.log(aplanado);
-                            </code></pre>
+                            <div class="codigo">
+                                <pre><code>
+                                    const array = [1, [2, 3], [4, 5]];
+                                    const aplanado = array.flat(); // [1, 2, 3, 4, 5]
+                                    console.log(aplanado);
+                                </code></pre>
+                            </div>
                         <p>En este ejemplo, flat() aplana el array multidimensional en un array unidimensional.</p>
             </div>
             <hr>
@@ -320,12 +335,14 @@
                             </ul>
                             <strong>Ejemplo de código:</strong>
                             <p>Uso del operador de encadenamiento opcional:</p>
-                    <pre><code>
-                        const objeto = { a: { b: 1 } };
-                        const valor = objeto.a?.b; // Devuelve 1
-                        const valorInexistente = objeto.c?.d; // Devuelve undefined
-                        console.log(valor, valorInexistente);
-                    </code></pre>
+                    <div class="codigo">
+                        <pre><code>
+                            const objeto = { a: { b: 1 } };
+                            const valor = objeto.a?.b; // Devuelve 1
+                            const valorInexistente = objeto.c?.d; // Devuelve undefined
+                            console.log(valor, valorInexistente);
+                        </code></pre>
+                    </div>
                     <p>En este ejemplo, el operador ?. permite acceder a la propiedad b sin lanzar un error si la propiedad c no existe.</p>
                 </div>
             <hr>
@@ -344,11 +361,13 @@
                         </ul>
                     <strong>Ejemplo de código:</strong>
                         <p>Uso de String.prototype.replaceAll:</p>
-                        <pre><code>
-                            const cadena = "Hola, mundo. Hola, universo.";
-                            const nuevaCadena = cadena.replaceAll("Hola", "Adiós");
-                            console.log(nuevaCadena); // "Adiós, mundo. Adiós, universo."
-                        </code></pre>
+                        <div class="codigo">
+                            <pre><code>
+                                const cadena = "Hola, mundo. Hola, universo.";
+                                const nuevaCadena = cadena.replaceAll("Hola", "Adiós");
+                                console.log(nuevaCadena); // "Adiós, mundo. Adiós, universo."
+                            </code></pre>
+                        </div>
                         <p>En este ejemplo, replaceAll() reemplaza todas las ocurrencias de "Hola" por "Adiós".</p>
             </div>
             <hr>
@@ -365,16 +384,18 @@
                             </ul>
                             <strong>Ejemplo de código:</strong>
                             <p>Uso de la sintaxis de campos de clase:</p>
-                            <pre><code>
-                                class Persona {
+                            <div class="codigo">
+                                <pre><code>
+                                    class Persona {
                                     nombre = "Juan";
                                     saludar() {
                                         console.log(`Hola, soy ${this.nombre}`);
                                     }
-                                }
-                                const persona = new Persona();
-                                persona.saludar(); // "Hola, soy Juan"
-                            </code></pre>
+                                    }
+                                    const persona = new Persona();
+                                    persona.saludar(); // "Hola, soy Juan"
+                                </code></pre>
+                            </div>
                             <p>En este ejemplo, se define un campo nombre y un método saludar() dentro de la clase Persona.</p>
             </div>
             <hr>
@@ -392,11 +413,13 @@
                             </ul>
                             <strong>Ejemplo de código:</strong>
                             <p>Uso de Array.prototype.findLast:</p>
-                            <pre><code>
+                            <div class="codigo">
+                                <pre><code>
                                     const array = [1, 2, 3, 4, 5];
                                     const ultimoPar = array.findLast(num => num % 2 === 0);
                                     console.log(ultimoPar); // 4
-                            </code></pre>
+                                </code></pre>
+                            </div>
                             <p>En este ejemplo, findLast() devuelve el último número par del array.</p>
             </div>
             <hr>
@@ -413,11 +436,13 @@
                             </ul>
                         <strong>Ejemplo de código:</strong>
                             <p>Uso de Array.prototype.groupBy:</p>
-                            <pre><code>
-                                        const array = [1, 2, 3, 4, 5];
-                                        const grupos = array.groupBy(num => num % 2 === 0 ? "par" : "impar");
-                                        console.log(grupos); // { par: [2, 4], impar: [1, 3, 5] }
-                                    </code></pre>
+                            <div class="codigo">  
+                                <pre><code>
+                                    const array = [1, 2, 3, 4, 5];
+                                    const grupos = array.groupBy(num => num % 2 === 0 ? "par" : "impar");
+                                    console.log(grupos); // { par: [2, 4], impar: [1, 3, 5] }
+                                </code></pre>
+                            </div>          
                             <p>En este ejemplo, groupBy() agrupa los números en pares e impares.</p>
             </div>
             <hr>
@@ -428,8 +453,8 @@
             <h2>Creado por:</h2>
         </div>
         <div class="creditos">
-            <a href="https://github.com/KarolainReyes/">Karolain Reyes</a>
-            <a href="https://github.com/Andre07g">Andres Leal</a>
+            <a href="https://github.com/KarolainReyes/" target="_blank">Karolain Reyes</a>
+            <a href="https://github.com/Andre07g" target="_blank">Andres Leal</a>
         </div>
     </footer>
 </body>
