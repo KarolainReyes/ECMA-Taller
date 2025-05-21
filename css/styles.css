@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  background: linear-gradient(to right, black, rgb(16, 16, 133), black);
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(16, 16, 133), black);
   color: white;
 }
 
 body a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -16,7 +16,7 @@ body a {
   flex-direction: row;
   width: 100%;
   height: 8vh;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.479);
 }
 
 .cuerpo-pagina {
@@ -27,28 +27,67 @@ body a {
   align-items: center;
 }
 
-.bloque-1 {
-  display: flex;
-  width: 90%;
-  gap: 1vh;
-  box-sizing: border-box;
+.info-principal {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f0f8ff;
+  padding: 15px 20px;
+  border-left: 6px solid #00bfff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  margin: 20px auto;
+  transition: all 0.3s ease;
 }
 
-.ecma-que-es {
-  width: 70%;
-  flex-wrap: wrap;
-}
-
-.tabla-navegacion {
-  width: 30%;
-  border: 1px solid white;
-  padding: 1vh;
+section div {
+  background-color: rgba(255, 255, 255, 0.05); 
+  color: #e0f7fa; 
+  padding: 20px;
+  margin: 30px auto;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.137);
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
 }
 
-.tabla-navegacion h3 {
-  text-align: center;
+/* Títulos dentro del bloque */
+section div h2, 
+section div h4 {
+  color: #00bcd4; 
+  margin-top: 0;
+}
+
+/* Párrafos */
+section div p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Lista */
+section div ul {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+section div ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Código */
+section div pre {
+  background-color: #1e1e1e;
+  color: #00ffcc;
+  padding: 10px 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
 }
 
 .ecma-version {
@@ -67,4 +106,140 @@ body a {
 
 
 
-.creditos{display: flex;justify-content: space-around;width: 90%;}
+.creditos {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+
+/* Barra lateral */
+nav.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2c3e50;
+  padding-top: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+nav.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav.sidebar a:hover {
+  background-color: #34495e;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+label[for="menu-toggle"] {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 4px;
+  user-select: none;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Cuerpo */
+
+main {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Footer */
+
+footer {
+  padding: 10px 20px;
+  position: relative;
+  bottom: 0;
+  left: 250px;
+  right: 0;
+  text-align: center;
+  transition: left 0.3s ease;
+
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+
+  label[for="menu-toggle"] {
+    display: block;
+  }
+
+  nav.sidebar {
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+
+  #menu-toggle:checked+nav.sidebar {
+    transform: translateX(0);
+  }
+
+
+  main {
+    margin-left: 0;
+  }
+
+  footer {
+    left: 0;
+  }
+
+  .info-principal {
+    padding: 12px 15px;
+    font-size: 1rem;
+    max-width: 90%;
+    border-left-width: 4px;
+  }
+
+  .info-principal {
+    section div p {
+      font-size: 0.9rem;
+      padding: 10px 12px;
+      border-left-width: 3px;
+    }
+  }
+  }
+
+
+@media (min-width: 768px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    label[for="menu-toggle"] {
+        display: none;
+    }
+
+    main.cuerpo-pagina {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    footer .creditos a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
